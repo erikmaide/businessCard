@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intent/intent.dart' as android_intent;
+import 'package:intent/action.dart' as android_action;
 
 void main() {
   runApp(MyApp());
@@ -48,10 +50,14 @@ class MyApp extends StatelessWidget {
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
-                    leading: Icon(
-                      Icons.phone,
-                      color: Colors.teal[900],
-                      size: 21.0,
+                    leading: RaisedButton(
+                      onPressed: _launchURL,
+                      color: Colors.green,
+                      child: Icon(
+                        Icons.phone,
+                        color: Colors.teal[900],
+                        size: 21.0,
+                      ),
                     ),
                     title: Center(
                       child: Text(
@@ -67,10 +73,13 @@ class MyApp extends StatelessWidget {
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
-                    leading: Icon(
-                      Icons.email,
-                      color: Colors.teal[900],
-                      size: 21.0,
+                    leading: RaisedButton(
+                      color: Colors.tealAccent,
+                      child: Icon(
+                        Icons.email,
+                        color: Colors.blue,
+                        size: 21.0,
+                      ),
                     ),
                     title: Center(
                       child: Text(
@@ -87,4 +96,11 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+_launchURL() async {
+  android_intent.Intent()
+    ..setAction(android_action.Action.ACTION_DIAL)
+    ..setData(Uri(scheme: "tel", path: "+37256907318"))
+    ..startActivity().catchError((e) => print(e));
 }
