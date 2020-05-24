@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,15 +9,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.cyan,
         body: SafeArea(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('images/erik.png'),
+            ClipOval(
+              child: Image.asset(
+                'images/erik.png',
+                width: 142,
+                height: 142,
+                fit: BoxFit.cover,
+              ),
             ),
             Text(
               "Erik Maide",
@@ -37,6 +40,10 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             ),
+            SizedBox(
+                height: 20.0,
+                width: 333.0,
+                child: Divider(color: Colors.teal[100])),
             Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
@@ -46,13 +53,15 @@ class MyApp extends StatelessWidget {
                       color: Colors.teal[900],
                       size: 21.0,
                     ),
-                    title: Text(
-                      '+37256907318',
-                      style: TextStyle(
-                          fontSize: 21.0,
-                          letterSpacing: 3.5,
-                          color: Colors.teal[900],
-                          fontFamily: 'SourceSansPro'),
+                    title: Center(
+                      child: Text(
+                        '+37256907318',
+                        style: TextStyle(
+                            fontSize: 21.0,
+                            letterSpacing: 8.0,
+                            color: Colors.teal[900],
+                            fontFamily: 'SourceSansPro'),
+                      ),
                     ))),
             Card(
                 color: Colors.white,
@@ -63,13 +72,15 @@ class MyApp extends StatelessWidget {
                       color: Colors.teal[900],
                       size: 21.0,
                     ),
-                    title: Text(
-                      'erik@maide.works',
-                      style: TextStyle(
-                          fontSize: 21.0,
-                          letterSpacing: 3.5,
-                          color: Colors.teal[900],
-                          fontFamily: 'SourceSansPro'),
+                    title: Center(
+                      child: Text(
+                        'erik@maide.works',
+                        style: TextStyle(
+                            fontSize: 21.0,
+                            letterSpacing: 3.5,
+                            color: Colors.teal[900],
+                            fontFamily: 'SourceSansPro'),
+                      ),
                     )))
           ],
         )),
