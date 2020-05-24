@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,6 +35,56 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             ),
+            Container(
+              color: Colors.white,
+              padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.phone,
+                    color: Colors.teal[900],
+                    size: 21.0,
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    '+37256907318',
+                    style: TextStyle(
+                        fontSize: 21.0,
+                        letterSpacing: 3.5,
+                        color: Colors.teal[900],
+                        fontFamily: 'SourceSansPro'),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              padding: EdgeInsets.all(10.0),
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.email,
+                    color: Colors.teal[900],
+                    size: 21.0,
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    'erik@maide.works',
+                    style: TextStyle(
+                        fontSize: 21.0,
+                        letterSpacing: 3.5,
+                        color: Colors.teal[900],
+                        fontFamily: 'SourceSansPro'),
+                  ),
+                ],
+              ),
+            )
           ],
         )),
       ),
