@@ -9,31 +9,44 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.yellow,
         body: SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                  color: Colors.lightBlue,
-                  child: Text('Container 1'),
-                  height: 125.0,
-                  width: 125.0),
-              Container(
-                width: 125.0,
-                height: 125.0,
+                padding: EdgeInsets.all(20.0),
+                height: double.infinity,
+                width: 139.0,
                 color: Colors.black,
-                child: Text(
-                  'Container 2',
-                  style: TextStyle(color: Colors.white),
-                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 23.3,
+                    width: 110.0,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    height: 23.3,
+                    width: 110.0,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    height: 23.3,
+                    width: 110.0,
+                    color: Colors.white,
+                  ),
+                ],
               ),
               Container(
-                width: 125.0,
-                height: 125.0,
-                color: Colors.white,
-                child: Text('Container 3'),
-              )
+                padding: EdgeInsets.all(20.0),
+                height: double.infinity,
+                width: 139.0,
+                color: Colors.red,
+              ),
             ],
           ),
         ),
