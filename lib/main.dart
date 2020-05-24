@@ -9,47 +9,33 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.all(20.0),
-                height: double.infinity,
-                width: 139.0,
-                color: Colors.black,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 23.3,
-                    width: 110.0,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    height: 23.3,
-                    width: 110.0,
-                    color: Colors.black,
-                  ),
-                  Container(
-                    height: 23.3,
-                    width: 110.0,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.all(20.0),
-                height: double.infinity,
-                width: 139.0,
-                color: Colors.red,
-              ),
-            ],
-          ),
-        ),
+            child: Column(
+          children: <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/erik.png'),
+            ),
+            Text(
+              "Erik Maide",
+              style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 39,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "FLUTTER DEVELOPER",
+              style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 24,
+                  color: Colors.teal.shade100,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        )),
       ),
     );
   }
