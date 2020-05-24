@@ -53,32 +53,22 @@ class MyApp extends StatelessWidget {
                           fontFamily: 'SourceSansPro'),
                     ))),
             Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Padding(
-                padding: EdgeInsets.all(25.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       color: Colors.teal[900],
                       size: 21.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       'erik@maide.works',
                       style: TextStyle(
                           fontSize: 21.0,
                           letterSpacing: 3.5,
                           color: Colors.teal[900],
                           fontFamily: 'SourceSansPro'),
-                    ),
-                  ],
-                ),
-              ),
-            )
+                    )))
           ],
         )),
       ),
