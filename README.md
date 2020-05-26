@@ -10,6 +10,11 @@ I have seen how to create a Flutter app entirely from scratch, I´m going to go 
 
 This application is an personal business card. Imagine every time you wanted to give someone your contact details or your business card but you didn't have it on you. Well, now you can get them to download your business card as an app.
 
+<p align="center">
+  <img height="420" src="https://user-images.githubusercontent.com/49160389/82754647-01af0c00-9dd7-11ea-94cb-ef2053b8a2a8.png">
+</p>
+
+
 ## What I will learn
 
 * How to create Stateless Widgets
