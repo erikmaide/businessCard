@@ -25,4 +25,4 @@ This application is an personal business card. Imagine every time you wanted to 
 
 
 
-![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
+![End Banner](https://raw.githubusercontent.com/erikmaide/test/master/footer.png)
